@@ -31,7 +31,11 @@
 #include "snappy-sinksource.h"
 
 #ifdef __SSE2__
+#ifdef __MINGW32__
+#include <intrin.h>
+#else
 #include <emmintrin.h>
+#endif
 #endif
 #include <stdio.h>
 
